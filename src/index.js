@@ -12,6 +12,13 @@ const DB_URI = "mongodb+srv://prince:uJeFGC3CsNXtwErb@cluster0.kh2zxr5.mongodb.n
 
 mongoose.set('strictQuery', true)
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Hello !! TESTING DB Updated",
+    url: `${req.protocol}://${req.get("host")}`,
+  });
+});
+
 mongoose.connect(DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
