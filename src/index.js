@@ -15,11 +15,9 @@ const DB_URI = process.env.DB_URI;
 mongoose.set('strictQuery', true)
 
 app.get("/", (req, res) => {
-  res.status(200).json({
-    message: "Hello !! TESTING DB Updated",
-    url: `${req.protocol}://${req.get("host")}`,
+    res.json("Hello !! TESTING DB Updated")
   });
-});
+
 
 mongoose.connect(DB_URI, {
   useNewUrlParser: true,
