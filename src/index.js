@@ -4,11 +4,9 @@ const mongoose = require('mongoose');
 const routes = require('./routes/routes');
 const bodyParser = require('body-parser');
 
-
 const app = express();
 const PORT = process.env.PORT || 8000;
 const DB_URI = process.env.DB_URI;
-
 
 
 
