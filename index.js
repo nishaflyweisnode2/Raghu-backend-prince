@@ -13,8 +13,8 @@ const DB_URI = process.env.DB_URI;
 mongoose.set('strictQuery', true)
 
 app.get("/", (req, res) => {
-    res.json("Hello !! TESTING DB Updated")
-  });
+  res.json("Hello !! TESTING DB Updated")
+});
 
 
 mongoose.connect(DB_URI, {
